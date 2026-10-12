@@ -1,0 +1,12 @@
+{
+  "domain": "fan_auto",
+  "name": "Fan Auto Control",
+  "codeowners": [],
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io",
+  "integration_type": "service",
+  "iot_class": "calculated",
+  "issue_tracker": "https://www.home-assistant.io",
+  "requirements": [],
+  "version": "1.0.0"
+}
