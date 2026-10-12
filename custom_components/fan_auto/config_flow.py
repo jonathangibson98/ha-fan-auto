@@ -42,15 +42,15 @@ from .const import (
 
 
 def _num(min_v: float, max_v: float, step: float = 1, unit: str | None = None):
-    return NumberSelector(
-        NumberSelectorConfig(
-            min=min_v,
-            max=max_v,
-            step=step,
-            mode=NumberSelectorMode.BOX,
-            unit_of_measurement=unit,
-        )
-    )
+    cfg: dict = {
+        "min": min_v,
+        "max": max_v,
+        "step": step,
+        "mode": NumberSelectorMode.BOX,
+    }
+    if unit:  # passing unit_of_measurement=None fails validation
+        cfg["unit_of_measurement"] = unit
+    return NumberSelector(NumberSelectorConfig(**cfg))
 
 
 def _schema(d: dict[str, Any], include_fan: bool) -> vol.Schema:
