@@ -1,0 +1,49 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Fan Auto Control",
+        "description": "Pick the temperature sensor and the actual fan. Turning the fan on/off yourself pauses auto control (manual override).",
+        "data": {
+          "temp_sensor": "Temperature sensor",
+          "fan_entity": "Fan",
+          "heat_sensor": "Heat sensor (optional, gates air circulation)",
+          "hot_out_entity": "'It's hot out' toggle (optional, gates everything)",
+          "on_temp": "Fan ON above (temp)",
+          "off_temp": "Fan OFF below (temp)",
+          "circ_min_temp": "Start air circulation at or above (temp)",
+          "circ_on_minutes": "Circulation: minutes ON",
+          "circ_off_minutes": "Circulation: minutes OFF between runs",
+          "manual_override_minutes": "Manual override lasts (minutes, 0 = until Auto switch toggled)"
+        }
+      }
+    },
+    "error": {
+      "off_below_on": "The OFF temp must be lower than the ON temp."
+    },
+    "abort": {
+      "already_configured": "This fan is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Fan Auto Control settings",
+        "data": {
+          "temp_sensor": "Temperature sensor",
+          "heat_sensor": "Heat sensor (optional, gates air circulation)",
+          "hot_out_entity": "'It's hot out' toggle (optional, gates everything)",
+          "on_temp": "Fan ON above (temp)",
+          "off_temp": "Fan OFF below (temp)",
+          "circ_min_temp": "Start air circulation at or above (temp)",
+          "circ_on_minutes": "Circulation: minutes ON",
+          "circ_off_minutes": "Circulation: minutes OFF between runs",
+          "manual_override_minutes": "Manual override lasts (minutes, 0 = until Auto switch toggled)"
+        }
+      }
+    },
+    "error": {
+      "off_below_on": "The OFF temp must be lower than the ON temp."
+    }
+  }
+}
